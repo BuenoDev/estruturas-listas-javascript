@@ -95,12 +95,18 @@ function ListaCircular(value){
         }
     }
 }
-
 var lde = new ListaDuplamenteEncadeada(0);
-lde.addValue(1);
-lde.addValue(2);
-lde.addValue(3);
-lde.addValue(4);
+var lc = new ListaCircular(0);
+var le = new ListaEncadeada(0);
+var ls = new ListaSimples(0);
+lde.addValue(21);
+for (var index = 0; index < 20; index++)  lde.addValue(Math.random()*100);
+for (var index = 0; index < 20; index++)  le.addValue(Math.random()*100);
+for (var index = 0; index < 20; index++)  lc.addValue(Math.random()*100);
+for (var index = 0; index < 20; index++)  ls.addValue(Math.random()*100);
 
-console.log(lde.findValue(2).nxt.key);
+console.log("lde: "+ lde.key);
+console.log("lc: "+ lc.key);
+console.log("le: "+ le.key);
+console.log("ls: "+ ls.key);
 
