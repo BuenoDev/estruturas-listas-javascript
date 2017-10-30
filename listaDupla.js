@@ -20,7 +20,11 @@ class ListaDupla{
     }
     deleteValue(value){
         var el = this.findValue(value);
-        if(el != null) this = null;
+        if(el != null) {
+            el.nxt.prev = el.prev;
+            el.prev.nxt = el.nxt;
+            el = null;
+        }
         else console.log("TRYING TO DELETE NON EXISTING VALUE");
     }
 

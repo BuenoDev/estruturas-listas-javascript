@@ -18,14 +18,9 @@ class ListaEncadeada{
     deleteValue(value){
         var element = this.findValue(value);
         if(element != null){
-            this = null;
-            /*
-            var index = this;
-            do{
-                index = index.nxt;
-            }while(index.nxt != element);
-            index.nxt = null;
-            */
+            element.nxt.prev = el.prev;
+            element.prev.nxt = el.nxt;
+            element = null;
         } else console.log("TRYING TO DELETE NON EXISTING VALUE");
     }
     showList(){
